@@ -15,9 +15,69 @@
         <section>
             <h2>Minecraft_Quest_The_Learning_Adventure (Python)</h2>
             <div class="project-code">
-                <div class="iframe-container">
-                    <iframe id="codeFrame" src="https://minecraft.makecode.com/---codeembed#pub:_LrJKH0bhJFL1:python" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
-                </div>
+                <pre>
+<code>
+radius = 0
+up = 0
+ss = [
+    "??? - ПРИВІТ?",
+    "??? - АГОВ",
+    "§6ТИ - ДЕ Я?",
+    "ОХ ПРИВІТ МЕНЕ ЗВУТЬ DAFANKA",
+    "DAFANKA - МЕНЕ ТАК НАЗВАЛИ БО Я",
+    "DAFANKA - НЕ ПОМ'ЯТАЮ",
+    "DAFANKA - СВОЄ ІМ'Я",
+    "DAFANKA - МИ ТУТ ЖИВИМО ДИСЬ",
+    "DAFANKА - ЗАЧЕКАЙ",
+    "DAFANKА - ХМММ",
+    "DAFANKА - ХММ",
+    "DAFANKА - ХМ",
+    "DAFANKА - А ТОЧНО",
+    "DAFANKА - 10 РОКІВ",
+    "§6ТИ - 10 РОКІВ???",
+    "DAFANKА - ТАК",
+    "DAFANKА - МОЖНА ПИТАННЯ?",
+    "§6ТИ - ТАК?",
+    "DAFANKА - А ТИ НОВЕНЬКИЙ ТАК?",
+    "§6ТИ - ТА ВИДНО ТАК",
+    "§6ТИ - Я ТУТ ТОЖЕ БУДУ ЯК ТИ??",
+    "DAFANKА - НІ ТУТ ЗАЛЕЖИТЬ ВІД",
+    "DAFANKА - КАЧЕСТВА ТВОЄЙ РОБОТИ",
+    "§6ТИ - РОБОТИ???",
+    "DAFANKА - ТАК РОБОТИ",
+    "DAFANKА - ЯК ТИ ПОНЯВ",
+    "DAFANKА - Я ПРАЦЮВАВ ПОГАНО",
+    "§6ТИ - Я ВАМ ДОПОМОЖУ",
+    "DAFANKА - НЕ ПОЛУЧИТСЯ МИ",
+    "ПРОБУВАЛИ(",
+    "DAFANKА - ЦЕ 5 РОКІВ!",
+    "§6ТИ - НЕ БІЙСЯ Я В ТЬОМУ ПРОФІ",
+    "DAFANKА - ДОБРЕ ВСЯ НАДІЯ НА",
+    "ТЕБЕ(",
+    "§6ТИ - Я ТОДІ ПІДУ",
+]
+
+blocks.place(IRON_DOOR,world(56,19,1))
+
+def pogovori_s_bossom():
+    blocks.place(AIR,world(56,19,1))
+player.on_chat("поговорити_з_босом", pogovori_s_bossom)
+
+def on_on_chat():
+    global radius, up
+    up = 18
+    radius = 63
+    for y in ss:
+        gameplay.title(mobs.target(LOCAL_PLAYER), "" + y, "")
+        loops.pause(2000)
+player.on_chat("start", on_on_chat)
+</code>
+                </pre>
+            </div>
+            <div class="download-button">
+                <a href="/mnt/data/Minecraft_Quest_The_Learning_A.mcworld" download="Minecraft_Quest_The_Learning_Adventure.mcworld">
+                    <button>Скачати карту</button>
+                </a>
             </div>
         </section>
     </main>
