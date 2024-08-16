@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Education: Пригоди Стаса і Лілі</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeLanguage(lang) {
+            let src;
+            switch(lang) {
+                case 'blocks':
+                    src = 'https://minecraft.makecode.com/---codeembed#pub:_LrJKH0bhJFL1';
+                    break;
+                case 'python':
+                    src = 'https://minecraft.makecode.com/---codeembed#pub:_LrJKH0bhJFL1:python';
+                    break;
+                case 'javascript':
+                    src = 'https://minecraft.makecode.com/---codeembed#pub:_LrJKH0bhJFL1:javascript';
+                    break;
+            }
+            document.getElementById('codeFrame').src = src;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -14,9 +31,14 @@
     <main>
         <section>
             <h2>Minecraft_Quest_The_Learning_Adventure</h2>
+            <div class="language-select">
+                <button onclick="changeLanguage('blocks')">Blocks</button>
+                <button onclick="changeLanguage('python')">Python</button>
+                <button onclick="changeLanguage('javascript')">JavaScript</button>
+            </div>
             <div class="project-code">
                 <div class="iframe-container">
-                    <iframe src="https://minecraft.makecode.com/---codeembed#pub:_LrJKH0bhJFL1" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
+                    <iframe id="codeFrame" src="https://minecraft.makecode.com/---codeembed#pub:_LrJKH0bhJFL1" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
                 </div>
             </div>
         </section>
